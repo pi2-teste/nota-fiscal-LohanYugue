@@ -36,6 +36,14 @@ public class NotaFiscal {
         System.out.println(numNota);
         this.numNota = numNota;
     }
+
+    public int getNumNota(int numeroNota) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void getValNota(double valorNota) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
