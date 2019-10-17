@@ -106,17 +106,7 @@ public class NotaFiscalForm extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("registrar nota", jPanel1);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
-            },
-            new String [] {
-                "NumNota", "ValNota"
-            }
-        ));
+        jTable1.setModel(new NotaFiscalTable());
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -162,6 +152,12 @@ public class NotaFiscalForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoValorActionPerformed
 
+    public void refreshTable() {
+     jTable1.invalidate();
+     jTable1.repaint();
+}
+
+    
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
         System.out.print("nro nota");
@@ -177,6 +173,7 @@ public class NotaFiscalForm extends javax.swing.JFrame {
         int mostraValor = Integer.parseInt(numValor);
         System.out.print("Valor: "+mostraValor);
         
+        refreshTable();
         controller.salvar(NumNota, mostraValor);
     }//GEN-LAST:event_btnSalvarActionPerformed
 

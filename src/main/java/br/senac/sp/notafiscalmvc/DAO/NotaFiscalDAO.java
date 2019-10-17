@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author lucas
+ * @author lohan.yugue
  */
 public class NotaFiscalDAO {
     private static ArrayList<NotaFiscal> listaNotas = new ArrayList<NotaFiscal>();
@@ -28,5 +28,14 @@ public class NotaFiscalDAO {
         
         return true;
     }
+    
+    public static int conta() {
+        return listaNotas.size();
+        } 
+    
+    public static NotaFiscal linha (int i) {
+        return listaNotas.get(i);
+    }
+
 
 }

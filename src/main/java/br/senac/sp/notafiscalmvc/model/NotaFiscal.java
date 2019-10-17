@@ -7,7 +7,7 @@ package br.senac.sp.notafiscalmvc.model;
 
 /**
  *
- * @author lucas
+ * @author lohan.yugue
  */
 public class NotaFiscal {
     double valNota;
