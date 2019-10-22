@@ -16,14 +16,13 @@ public class NotaFiscalController {
     
     
     
-    public static boolean salvar (int numeroNota, double valorNota){
+    public static boolean salvar (int numeroNota, String descricaoNota, double valorNota){
         
         NotaFiscal nota = new NotaFiscal();
         
         nota.setNumNota(numeroNota);
+        nota.setDescricaoNota(descricaoNota);
         nota.setValNota(valorNota);
-        
-        System.out.println("\nagora no controller\n"+numeroNota+" "+valorNota);
         
         NotaFiscalDAO dao = new NotaFiscalDAO();
         

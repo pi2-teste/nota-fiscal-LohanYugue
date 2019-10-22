@@ -24,10 +24,10 @@ import javax.swing.table.AbstractTableModel;
  * @author lucas
  */
 public class NotaFiscalTable extends AbstractTableModel {
-    private String[] columnNames = {"NumNota","ValNota"};
+    private String[] columnNames = {"NumNota","DescricaoNota","ValNota"};
 
     public int getColumnCount() {
-        return 2;
+        return 3;
     }
 
     public int getRowCount() {
@@ -46,6 +46,9 @@ public class NotaFiscalTable extends AbstractTableModel {
         if (col == 0)
             
         return nota.getNumNota();
+        
+        if (col == 1)
+        return nota.getDescricaoNota();    
         return nota.getValNota();
     }
 
